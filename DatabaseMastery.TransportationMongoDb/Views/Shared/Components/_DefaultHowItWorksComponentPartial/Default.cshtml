@@ -1,0 +1,47 @@
+﻿@model List<ResultHowItWorkDto>
+<section class="section pt-85 bg-worldmap">
+    <div class="container">
+        <div class="text-center">
+            <img class="mb-15" src="/templates/assets/imgs/template/icons/favicon.svg" alt="transp">
+            <h2 class="color-brand-2 mb-20">Süreç Nasıl İşler ?</h2>
+            <p class="font-md color-grey-700">
+                Teslimat yapmak istediğiniz şehirleri siz belirlersiniz. Tüm teslimatlar belirli bir hizmet bölgesi dahilinde gerçekleştirilir ve sunulan teslimat hizmetleri konuma göre değişiklik gösterir. Yöntem veya gereksinim ne olursa olsun, zamanında teslimatı sağlamak adına en uygun hızlı gönderim çözümünü bulup sizin için ayarlarız.
+            </p>
+        </div>
+        <div class="row mt-50">
+            <div class="col-lg-6 mb-30">
+                <div class="box-image-how">
+                    <img class="w-100" src="/templates/assets/imgs/page/homepage1/how-it-work.png" alt="transp">
+                    <div class="box-info-bottom-img">
+                        <div class="image-play"><img class="mb-15" src="/templates/assets/imgs/template/icons/play.svg" alt="transp"></div>
+                        <div class="info-play">
+                            <h4 class="color-white mb-15">Sektörde 25 yıllık deneyime sahibiz.</h4>
+                            <p class="font-sm color-white">Taşımacılık sektöründe birçok farklı alternatif mevcut, ancak firmamızın sunduğu güvenli altyapı ve hızlı teslimat ağı, bizi rakiplerimizden ayıran en büyük farktır.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-30">
+                <ul class="list-how-works">
+
+                    @foreach(var item in Model)
+                    {
+                        
+                        <li>
+                            <div class="image-how"> <span class="img"> <img src="@item.IconUrl" alt="transp"></span></div>
+                            <div class="info-how">
+                                <h5 class="color-brand-2">@item.Title</h5>
+                                <p class="font-md color-grey-700">@item.Description</p>
+                            </div>
+                        </li>
+
+
+
+                    }
+
+                     
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
