@@ -7,14 +7,12 @@ using DatabaseMastery.TransportationMongoDb.Services.GetInTouchServices;
 using DatabaseMastery.TransportationMongoDb.Services.HowItWorkServices;
 using DatabaseMastery.TransportationMongoDb.Services.TestimonialServices;
 using DatabaseMastery.TransportationMongoDb.Services.ProjectSectionService;
-
-
+using DatabaseMastery.TransportationMongoDb.Services.QuestionServices;
+using DatabaseMastery.TransportationMongoDb.Services.ShipmentServices;
+using DatabaseMastery.TransportationMongoDb.Services.ShipmentTrackingServices;
 using DatabaseMastery.TransportationMongoDb.Settings;
 using Microsoft.Extensions.Options;
 using System.Reflection;
-using DatabaseMastery.TransportationMongoDb.Services.QuestionServices;
-
-
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +25,9 @@ builder.Services.AddScoped<IHowItWorkService, HowItWorkService>();
 builder.Services.AddScoped<ITestimonialService, TestimonialService>();
 builder.Services.AddScoped<IProjectSectionService, ProjectSectionService>();
 builder.Services.AddScoped<IQuestionService, QuestionService>();
+builder.Services.AddScoped<IShipmentService, ShipmentService>();
+builder.Services.AddScoped<IShipmentTrackingService, ShipmentTrackingService>();
+builder.Services.AddScoped<IShipmentTrackingService, ShipmentTrackingService>();
 
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
